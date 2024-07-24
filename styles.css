@@ -7,15 +7,13 @@
 :root {
   --white: #ffffff;
   --card-gradient: linear-gradient(60deg, #cac6c6 60%, #edf4f5);
-  --text-gradient:linear-gradient(to right, #ff5f6d, #ffc371);
+  --text-gradient: linear-gradient(to right, #ff5f6d, #ffc371);
   --card-frontface: linear-gradient(90deg, #292929, rgb(85, 83, 86));
-  --border:1px solid red;
-  --card-border:1px solid rgb(215, 211, 211);
-  --Brick-font:"CustomFont";
-  --font-montserrat:"Montserrat"
-
+  --border: 1px solid red;
+  --card-border: 1px solid rgb(215, 211, 211);
+  --Brick-font: "CustomFont";
+  --font-montserrat: "Montserrat";
 }
-
 
 body {
   margin: 0;
@@ -23,7 +21,6 @@ body {
   background-color: #292929;
   box-sizing: border-box;
 }
-
 
 .image {
   width: 500px;
@@ -35,7 +32,6 @@ body {
   border-radius: 0px 0px 15px 15px;
   background-image: var(--card-gradient);
 }
-
 
 .image > img {
   border-radius: 0px 0px 15px 15px;
@@ -58,13 +54,12 @@ body {
   padding-left: 5%;
   /* filter: invert(998%) sepia(19%) saturate(476%) hue-rotate(86deg)
   brightness(118%) contrast(119%); */
-
 }
 
 /* ------------------this is to reduce the transparency of moving blob------------------- */
 .one::after {
   content: "";
-  background: url("./media/Vipin.gif") no-repeat;
+  background: url(./media/Vipin.gif) no-repeat;
   background-size: 700px;
   opacity: 0.1;
   top: 0;
@@ -105,8 +100,6 @@ p {
 
 /*!====================End of section one or frame 1============================================================= */
 
-
-
 /*?====================this is section 2 or frame 2============================================================== */
 
 .two {
@@ -126,7 +119,7 @@ p {
 
 .two::after {
   content: "";
-  background: url("./media/bubble.gif") no-repeat;
+  background: url(./media/bubble.gif) no-repeat;
   background-size: 800px 700px;
 
   top: 90px;
@@ -173,13 +166,11 @@ p {
 
 /*?====================this is section 2 or frame 2 ends============================================================== */
 
-
-
 /*
 TODO:-for color only so no TODO======================this is section 3 or frame 3 start==============================================================
  */
 
- .outerContainer {
+.outerContainer {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -206,7 +197,8 @@ TODO:-for color only so no TODO======================this is section 3 or frame 
   transform: rotateY(360deg);
 }
 
-.three, .back-three {
+.three,
+.back-three {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -217,7 +209,8 @@ TODO:-for color only so no TODO======================this is section 3 or frame 
   transform: rotateY(180deg);
 }
 
-.three > .card, .back-three > .card {
+.three > .card,
+.back-three > .card {
   border: var(--card-border);
   border-radius: 25px;
   width: 800px;
@@ -336,10 +329,12 @@ a:active {
 TODO====================this is section 3 or frame 3 ends==============================================================
  */
 
-
-
 .download {
-  background-image: linear-gradient(to right, rgb(53, 123, 220) 21%, #67ccc9 45%);
+  background-image: linear-gradient(
+    to right,
+    rgb(53, 123, 220) 21%,
+    #67ccc9 45%
+  );
   background-size: 200% 150%; /* Ensures the gradient covers the element */
   background-position: left center;
   margin: auto;
@@ -376,18 +371,17 @@ TODO====================this is section 3 or frame 3 ends=======================
 /* ====================== */
 /* =========================== */
 
-.contact{
-width: 100%;
-height: 700px;
-/* border: 1px solid red; */
-display: flex;
+.contact {
+  width: 100%;
+  height: 700px;
+  /* border: 1px solid red; */
+  display: flex;
 
-justify-content:space-around;
-align-items:center;
-padding-left: 2%;
-margin-top: 3%;
-background-color: #383638;
-
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 2%;
+  margin-top: 3%;
+  background-color: #383638;
 }
 .mesh {
   width: 550px;
@@ -405,7 +399,6 @@ background-color: #383638;
   }
 }
 
-
 /* ===============================contact form======================== */
 .contact-form {
   /* background-image:linear-gradient(60deg,#f09976,#f1b096); */
@@ -419,15 +412,13 @@ background-color: #383638;
   align-items: center;
   justify-content: center;
   /* border: var(--border); */
-  
 }
 
 .contact-form h2 {
   margin-bottom: 1em;
   color: #f3f0f0;
- font-size: 3em;
+  font-size: 3em;
   font-family: var(--font-montserrat);
-
 }
 
 .contact-form .form-group {
@@ -462,7 +453,11 @@ background-color: #383638;
 }
 
 .contact-form button {
-  background-image: linear-gradient(90deg,rgb(234, 71, 71),rgb(243, 152, 152));
+  background-image: linear-gradient(
+    90deg,
+    rgb(234, 71, 71),
+    rgb(243, 152, 152)
+  );
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -477,7 +472,3 @@ background-color: #383638;
 .contact-form button:hover {
   background-color: #0056b3;
 }
-
-
-
- 
