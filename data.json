@@ -1,0 +1,29 @@
+[
+  {
+    "id": "0",
+    "title": "Ecommerce site",
+    "desc": "Developed a fully functional E-commerce application to facilitate online shopping.Created a responsive and visually appealing user interface using HTML and CSS.Implemented interactive features and client-side analysis and validations with JavaScript.Built a robust backend with PHP to manage user accounts, product listings, and transactions.Integrated a secure payment gateway for processing orders Ensured data security and efficient database management using MySQL.",
+    "link": "https://www.github.com/vipin-rwt/ecommerce"
+  },
+
+  {
+    "id": "1",
+    "title": "Resume maker",
+    "desc": "Developed a web application that allows users to create and customize professional resumes.Designed an intuitive user interface using React and Tailwind CSS.Managed user data and generated PDF resumes with a Django backend.Enabled real-time preview and provided multiple customizable templates.Implemented secure user authentication using JWT ",
+    "link": "www.github.com/vipin-rwt/resume_maker"
+  },
+
+  {
+    "id": "2",
+    "title": "Movie Recommend",
+    "desc": "Developed a movie recommendation website for personalized suggestions.Built an intuitive user interface using React and Tailwind CSS.Powered the backend with Django to analyze user behavior for tailored recommendations.Implemented advanced search, filtering, and secure user authentication with JWT.Enabled users to rate and review movies, enhancing the recommendation engine.",
+    "link": "www.github.com/vipin-rwt/movie_recomm"
+  },
+
+  {
+    "id": "3",
+    "title": "Welcome",
+    "desc": "Welcome to the project sections. Take a deep dive look into the projects. Respective links are availaible there",
+    "link": ""
+  }
+]

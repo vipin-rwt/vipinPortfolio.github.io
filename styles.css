@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "CustomFont"; /* Name your font family */
+  src: url("./NTBrickSans/NTBrickSans.ttf"); /* Locate the .ttf file within your directory*/
+}
+
+:root {
+  --white: #ffffff;
+  --card-gradient: linear-gradient(60deg, #cac6c6 60%, #edf4f5);
+  --text-gradient:linear-gradient(to right, #ff5f6d, #ffc371);
+  --card-frontface: linear-gradient(90deg, #292929, rgb(85, 83, 86));
+  --border:1px solid red;
+  --card-border:1px solid rgb(215, 211, 211);
+  --Brick-font:"CustomFont";
+  --font-montserrat:"Montserrat"
+
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #292929;
+  box-sizing: border-box;
+}
+
+
+.image {
+  width: 500px;
+  height: 650px;
+  margin-left: auto;
+  margin-top: -60px;
+  margin-right: 60px;
+  border-bottom: 1px solid #c9cbcb;
+  border-radius: 0px 0px 15px 15px;
+  background-image: var(--card-gradient);
+}
+
+
+.image > img {
+  border-radius: 0px 0px 15px 15px;
+}
+
+/*! ====================this is section one or frame 1============================ */
+
+.one {
+  color: var(--white);
+  width: 800px;
+  height: 700px;
+  margin-top: -600px;
+  /* border: var(--border); */
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  /* filter: invert(998%) sepia(19%) saturate(476%) hue-rotate(86deg)
+  brightness(118%) contrast(119%); */
+
+}
+
+/* ------------------this is to reduce the transparency of moving blob------------------- */
+.one::after {
+  content: "";
+  background: url(/media/Vipin.gif) no-repeat;
+  background-size: 700px;
+  opacity: 0.1;
+  top: 0;
+  left: 0px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+/* ------------------------------------------------------------------------------ */
+
+.text {
+  width: fit-content;
+  text-align: left;
+
+  /* border: var(--border); */
+  line-height: 0.4em;
+}
+
+.text > span,
+p {
+  font-family: var(--font-montserrat);
+  text-shadow: 2px 2px 8px #373535;
+  font-size: 3em;
+}
+.text > .devtext {
+  /* border: var(--border); */
+  font-family: var(--Brick-font);
+  line-height: 1.2em;
+  font-size: 3em;
+  font-weight: 200;
+  display: inline;
+  margin-top: 0;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/*!====================End of section one or frame 1============================================================= */
+
+
+
+/*?====================this is section 2 or frame 2============================================================== */
+
+.two {
+  /* border: var(--border); */
+  color: var(--white);
+  height: 100vh;
+  display: flex;
+
+  align-items: center;
+  padding-left: 5%;
+
+  margin-bottom: 1%;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.two::after {
+  content: "";
+  background: url(/media/bubble.gif) no-repeat;
+  background-size: 800px 700px;
+
+  top: 90px;
+  left: 700px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.text-about {
+  /* border: var(--border); */
+  width: 700px;
+  font-family: var(--font-montserrat);
+}
+
+.text-about > .heading {
+  font-size: 4em;
+
+  font-weight: 600;
+  line-height: 1px;
+}
+
+.text-about > .text-ab {
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-size: 1em;
+}
+
+.two > img {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: -800px;
+}
+
+.Frontcard-Git-link {
+  visibility: hidden;
+}
+
+.Frontcard-Git-link,
+.card-Git-link {
+  color: white;
+  font-family: var(--font-montserrat);
+}
+
+/*?====================this is section 2 or frame 2 ends============================================================== */
+
+
+
+/*
+TODO:-for color only so no TODO======================this is section 3 or frame 3 start==============================================================
+ */
+
+ .outerContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  height: 52vh;
+  width: 800px;
+  perspective: 1000px;
+}
+
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.34, 1.56, 0.61, 1);
+}
+
+.thecard.flipped {
+  transform: rotateY(360deg);
+}
+
+.three, .back-three {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back-three {
+  transform: rotateY(180deg);
+}
+
+.three > .card, .back-three > .card {
+  border: var(--card-border);
+  border-radius: 25px;
+  width: 800px;
+  height: 400px;
+  background-image: var(--card-frontface);
+  color: var(--white);
+}
+
+.card > header {
+  height: 40px;
+  padding: 4% 2% 2% 2%;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card > header > .card-logo {
+  height: 50px;
+  width: 50px;
+  margin-left: 2%;
+}
+
+.card > header > .card-sociallink {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-content {
+  width: 90%;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+}
+
+.card-content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content > div > .card-back-heading {
+  font-size: 2.5em;
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 0%;
+}
+
+.card-content > div > .card-back-text {
+  font-size: 0.8em;
+  font-family: var(--font-montserrat);
+  width: 500px;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}
+
+.project-section {
+  margin-left: auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.project-section > li {
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.project-section > ul {
+  margin-top: 0px;
+}
+
+.project-section > ul > li {
+  list-style: none;
+  margin-top: 1em;
+}
+
+.project-section > ul > li > a {
+  font-size: 0.9em;
+  font-family: var(--font-montserrat);
+  color: white;
+}
+
+.card-back-heading {
+  font-size: 3em;
+  font-family: var(--font-montserrat);
+  margin-bottom: 0%;
+}
+
+.card-back-text {
+  font-size: 0.9em;
+  font-family: var(--font-montserrat);
+  width: 90%;
+  line-height: 1.5em;
+}
+
+a:active {
+  transform: perspective(800px) rotateY(360deg);
+}
+
+/*
+TODO====================this is section 3 or frame 3 ends==============================================================
+ */
+
+
+
+.download {
+  background-image: linear-gradient(to right, rgb(53, 123, 220) 21%, #67ccc9 45%);
+  background-size: 200% 150%; /* Ensures the gradient covers the element */
+  background-position: left center;
+  margin: auto;
+  padding: 15px 15px;
+  text-align: center;
+  transition: background-position 0.5s ease, color 0.5s ease; /* Smooth transition */
+  width: 200px;
+  height: 30px;
+  color: white;
+  /* box-shadow: 0 0 90px #eee; */
+  border-radius: 10px;
+  font-family: var(--font-montserrat);
+  cursor: pointer;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: var(--border); */
+  margin-top: -100px;
+}
+
+.download > a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.download:hover {
+  background-position: right center; /* Moves background gradient on hover */
+  color: #fff; /* Changes text color on hover */
+  box-shadow: 0 0 90px #eee;
+}
+
+/* ====================== */
+/* =========================== */
+
+.contact{
+width: 100%;
+height: 700px;
+/* border: 1px solid red; */
+display: flex;
+
+justify-content:space-around;
+align-items:center;
+padding-left: 2%;
+margin-top: 3%;
+background-color: #383638;
+
+}
+.mesh {
+  width: 550px;
+  height: 550px;
+
+  animation: rotate 20s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ===============================contact form======================== */
+.contact-form {
+  /* background-image:linear-gradient(60deg,#f09976,#f1b096); */
+  padding: 0 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: inherit;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: var(--border); */
+  
+}
+
+.contact-form h2 {
+  margin-bottom: 1em;
+  color: #f3f0f0;
+ font-size: 3em;
+  font-family: var(--font-montserrat);
+
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+  /* border: var(--border); */
+  width: 500px;
+}
+
+.contact-form .form-group label {
+  font-family: var(--font-montserrat);
+  margin-bottom: 2em;
+  font-size: 1.2em;
+  color: #fefdfd;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  margin-top: 3%;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.contact-form button {
+  background-image: linear-gradient(90deg,rgb(234, 71, 71),rgb(243, 152, 152));
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 50%;
+  height: 50px;
+  margin: 2em 120px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+ 
