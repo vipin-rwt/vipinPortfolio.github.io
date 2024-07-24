@@ -64,7 +64,7 @@ body {
 /* ------------------this is to reduce the transparency of moving blob------------------- */
 .one::after {
   content: "";
-  background: url(/media/Vipin.gif) no-repeat;
+  background: url(./media/Vipin.gif) no-repeat;
   background-size: 700px;
   opacity: 0.1;
   top: 0;
@@ -126,7 +126,7 @@ p {
 
 .two::after {
   content: "";
-  background: url(/media/bubble.gif) no-repeat;
+  background: url(./media/bubble.gif) no-repeat;
   background-size: 800px 700px;
 
   top: 90px;
