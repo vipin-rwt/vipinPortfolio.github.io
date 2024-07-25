@@ -533,7 +533,7 @@ TODO====================this is section 3 or frame 3 ends=======================
 /*!====================start of section one or frame 1============================================================= */
 
   .one{
-    border: var(--border);
+/*     border: var(--border); */
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
@@ -604,7 +604,7 @@ TODO====================this is section 3 or frame 3 ends=======================
 
 }
 .two>.girl{
-  border: var(--border);
+/*   border: var(--border); */
   width: 105%;
   height: 900px;
   margin-left: -20px;
