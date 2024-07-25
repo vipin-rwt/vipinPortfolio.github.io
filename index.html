@@ -8,9 +8,12 @@
   </head>
   <body>
     <header>
-      <img src="/media/logo.png" alt="" srcset="" width="80px" height="50px" />
+      <img src="./media/logo.png" alt="" srcset="" width="80px" height="50px" />
     </header>
 
+    <div class="image">
+      <img src="./media/file.png" alt="" width="100%" height="100%" />
+    </div>
 
     <!------------------- section 1 starts----------------------- -->
     <section class="one">
@@ -40,8 +43,7 @@
           solutions.
         </p>
       </div>
-      <img src="/media/min.svg" alt="" width="300px" height="400px" />
-         
+      <img src="./media/min.svg" alt="" width="300px" height="400px" />
     </section>
     <!----- section 2 ends--- -->
 
@@ -54,7 +56,7 @@
               <header class="card-header">
                 <div class="card-logo" onclick="flip(3)">
                   <img
-                    src="/media/Vlogo.png"
+                    src="./media/Vlogo.png"
                     alt=""
                     width="100%"
                     height="100%"
@@ -62,18 +64,18 @@
                 </div>
                 <div class="card-sociallink">
                   <img
-                    src="/media/github.svg"
+                    src="./media/github.svg"
                     alt=""
                     width="30px"
                     height="30px"
                   />
                   <img
-                    src="/media/mail.svg"
+                    src="./media/mail.svg"
                     alt=""
                     width="30px"
                     height="30px"
                   />
-                  <img src="/media/in.svg" alt="" width="30px" height="30px" />
+                  <img src="./media/in.svg" alt="" width="30px" height="30px" />
                 </div>
               </header>
               <section class="card-content">
@@ -134,7 +136,7 @@
               <header class="card-header" onclick="flip(3)">
                 <div class="card-logo">
                   <img
-                    src="/media/Vlogo.png"
+                    src="./media/Vlogo.png"
                     alt=""
                     width="100%"
                     height="100%"
@@ -142,18 +144,18 @@
                 </div>
                 <div class="card-sociallink">
                   <img
-                    src="/media/github.svg"
+                    src="./media/github.svg"
                     alt=""
                     width="30px"
                     height="30px"
                   />
                   <img
-                    src="/media/mail.svg"
+                    src="./media/mail.svg"
                     alt=""
                     width="30px"
                     height="30px"
                   />
-                  <img src="/media/in.svg" alt="" width="30px" height="30px" />
+                  <img src="./media/in.svg" alt="" width="30px" height="30px" />
                 </div>
               </header>
               <section class="card-content">
@@ -218,7 +220,7 @@
     <!-- <img src="s2.png" alt="" srcset="" width="50%" height="600px" style="margin-left: 20%;"> -->
 
     <div class="download" onclick="clickbtn(event)">
-      <a href="/resume.html">Resume</a>
+      <a href="./resume.html">Resume</a>
     </div>
 
     <div class="contact">
@@ -306,7 +308,7 @@
         const btn = document
           .getElementsByClassName("download")[0]
           .getElementsByTagName("a")[0];
-        btn.href = "/resume.html";
+        btn.href = "resume.html";
         // Optionally, you can add this to follow the link after changing the href
         window.location.href = btn.href;
       }
