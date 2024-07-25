@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #292929;
+  background-color: #242424;
   box-sizing: border-box;
  overflow-x: hidden;
 }
@@ -36,7 +36,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding-left: 5%;
   /* filter: invert(998%) sepia(19%) saturate(476%) hue-rotate(86deg)
@@ -48,13 +48,15 @@ body {
   content: "";
   background: url(./media/Vipin.gif) no-repeat;
   background-size: 700px;
-  opacity: 0.1;
+  opacity: 0.2;
   top: 0;
   left: 0px;
   bottom: 0;
   right: 0;
   position: absolute;
+  z-index: -1;
 }
+
 /* ------------------------------------------------------------------------------ */
 
 .text {
@@ -69,13 +71,15 @@ body {
 p {
   font-family: var(--font-montserrat);
   text-shadow: 2px 2px 8px #373535;
-  font-size: 3em;
+  font-size: 2rem;
+  line-height: 1rem;
+  font-weight: 600;
 }
 .text > .devtext {
   /* border: var(--border); */
   font-family: var(--Brick-font);
-  line-height: 1.2em;
-  font-size: 3em;
+  line-height: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 200;
   display: inline;
   margin-top: 0;
@@ -86,13 +90,22 @@ p {
 }
 
 .image {
-  width: 42%;
-  height: 680px;
+  width: 43%;
+  height: 580px;
   /* margin-left: auto; */
 /* border: var(--border); */
   margin-right: 60px;
   /* background-color: rgb(17, 2, 47); */
+  /* display: flex;
+  justify-items: flex-start;
+  align-items: flex-start; */
  
+}
+
+video{
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
 }
 
 
@@ -109,6 +122,7 @@ p {
   color: var(--white);
   height: 100vh;
   display: flex;
+  flex-direction: row;
 
   align-items: center;
   padding-left: 5%;
@@ -121,12 +135,14 @@ p {
 
 .two::after {
   content: "";
-  background: url(./media/log-in-girl.svg) no-repeat;
-  background-size: 800px 800px;
+  background: url(./media/min.svg) no-repeat;
+  background-size: 200px 200px;
  /* border: var(--border); */
- transform: rotateY(180deg);
+
+ margin-top: 700px;
+
   top: 0px;
-  left: 700px;
+  left:0px;
   bottom: 0;
   right: 0;
   position: absolute;
@@ -139,7 +155,7 @@ p {
 }
 
 .text-about > .heading {
-  font-size: 4em;
+  font-size: 4rem;
 
   font-weight: 600;
   line-height: 1px;
@@ -148,14 +164,16 @@ p {
 .text-about > .text-ab {
   letter-spacing: 1px;
   line-height: 25px;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
-.two > img {
-  position: absolute;
-  margin-top: auto;
-  margin-bottom: -800px;
+.two>.girl{
+  width: 55%;
+  height: 800px;
+  transform: rotateY(180deg);
 }
+
+
 
 .Frontcard-Git-link {
   visibility: hidden;
@@ -179,8 +197,12 @@ TODO:-for color only so no TODO======================this is section 3 or frame 
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   
 }
+
+
+
 
 .container {
   position: relative;
@@ -488,3 +510,284 @@ TODO====================this is section 3 or frame 3 ends=======================
 
 
 /* ===============contact us frame ends============================== */
+
+
+
+
+
+
+
+
+
+/* ===================================== */
+/* ============================================== */
+/* ============================================== */
+/* ============================================== */
+
+@media screen and (max-width:500px) {
+  body{
+  background-color:#242424;
+  overflow-y: hidden;
+  }
+
+/*!====================start of section one or frame 1============================================================= */
+
+  .one{
+    border: var(--border);
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    padding: 0px;
+    margin-top: 2%;
+  }
+
+  .text{
+          /* border: 1px solid red; */
+          width: 100%;
+          text-align: center;
+          margin-top: -100px;
+  }
+  
+
+  .one::after{
+    content:"";
+    display: none;
+  }
+
+  .image>video{
+    width: 380px;
+    height: 480px;
+    margin-left:-90px;
+  }
+
+
+
+
+/*!====================End of section one or frame 1============================================================= */
+
+
+/*!====================start of section one or frame 2============================================================= */
+
+.two{
+  display: flex;
+  flex-direction: column-reverse;
+  height: 1000px;
+  
+  /* border: var(--border); */
+}
+
+.text-about{
+  width: 100%;
+  height: 1800px;
+
+  overflow-y: hidden;
+  /* border: var(--border); */
+
+}
+
+.two::after{
+  content: "";
+  background: url(./media/min.svg) no-repeat;
+  background-size: 200px 200px;
+ /* border: var(--border); */
+
+ margin-top: 900px;
+
+  top: 0px;
+  left:0px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+
+
+
+}
+.two>.girl{
+  border: var(--border);
+  width: 105%;
+  height: 900px;
+  margin-left: -20px;
+  
+}
+
+
+
+
+
+
+/*!====================End of section 2 or frame 2============================================================= */
+
+
+
+
+/*!====================start of section 3 or frame 3============================================================= */
+
+
+
+  .outerContainer {
+  height:100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: #007bff; */
+  
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+/*!====================End of section 3 or frame 3============================================================= */
+
+
+
+
+.download {
+  background-image: linear-gradient(
+    to right,
+    rgb(53, 123, 220) 21%,
+    #67ccc9 45%,
+  );
+  background-size: 200% 150%; /* Ensures the gradient covers the element */
+  background-position: left center;
+  margin: auto;
+  padding: 15px 15px;
+  text-align: center;
+  transition: background-position 0.5s ease, color 0.5s ease; /* Smooth transition */
+  width: 200px;
+  height: 30px;
+
+  /* box-shadow: 0 0 90px #eee; */
+  border-radius: 10px;
+  font-family: var(--font-montserrat);
+  cursor: pointer;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: var(--border); */
+  margin-top: -100px;
+}
+
+.download > a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.download:hover {
+  background-position: right center; /* Moves background gradient on hover */
+  color: #fff; /* Changes text color on hover */
+  box-shadow: 0 0 90px #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!====================start of section 4 or frame 4============================================================= */
+ .contact {
+  width: 100%;
+  height: 900px;
+  /* border: 1px solid red; */
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 25%;
+  background-color: #383638;
+ margin-bottom: 0px;
+ padding: 2%;
+}
+
+
+.mesh {
+ 
+  /* animation: rotate 100s linear infinite;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.mesh>img{
+  width: 80%;
+  filter: invert(80%) sepia(100%) saturate(2476%) hue-rotate(86deg)
+  brightness(118%) contrast(119%);
+  animation: rotate 100s linear infinite; 
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-form{
+  width: 80%;
+  margin-top: -300px;
+  background-color: #242424;
+  opacity: .95;
+  z-index: 1;
+  /* border: 1px solid red; */
+}
+
+
+.form-form{
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.contact-form {
+  /* background-image:linear-gradient(60deg,#f09976,#f1b096); */
+  padding: 0 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: inherit;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: var(--border); */
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 55%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  margin-top: 3%;
+}
+
+/*!====================End of section 4 or frame 4============================================================= */
+
+
+}
+
