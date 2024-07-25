@@ -28,6 +28,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: linee 0.5s ease;
   }
   .download>a{
     color: white;
@@ -36,7 +37,6 @@ body {
   
   .download:hover{
     background-image: linear-gradient(90deg,rgb(48, 89, 211),rgb(203, 153, 241));
-
   }
 
 .resume{
@@ -185,3 +185,6 @@ section .job ul {
 section .skills p {
     margin-bottom: 10px;
 }
+
+
+
