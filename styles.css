@@ -32,7 +32,7 @@ body {
 .one {
   color: var(--white);
   width: 100%;
-  height: 700px;
+  height: 750px;
   background-image: linear-gradient(120deg,rgba(155, 128, 245, 0.6) 15%,rgba(57, 14, 114, 0.5) 35%,#242424 43%);
   /* border: var(--border); */
   flex-wrap: wrap;
@@ -118,12 +118,15 @@ video {
 /*?====================this is section 2 or frame 2============================================================== */
 
 .two {
+  /* clip-path: polygon(0% 0%, 100.1% 100.3%,100 0% 100%); */
   /* border: var(--border); */
   color: var(--white);
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background-image:linear-gradient(60deg,rgb(42, 5, 191) 5%,rgb(247, 247, 232));
+  /* background-image:linear-gradient(60deg,rgb(42, 5, 191) 5%,rgb(247, 247, 232)); */
+  background-image:linear-gradient(120deg,#5B4887 5%,rgb(29, 26, 42) 50%);
+
   align-items: center;
   padding-left: 5%;
 
@@ -538,10 +541,10 @@ background-image: linear-gradient(180deg,rgb(36, 18, 53) 40%, rgb(182, 176, 192)
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;
-    padding: 0px;
+    padding-bottom: 15%;
     margin-top: 2%;
     background-image: linear-gradient(360deg,rgba(49, 21, 141, 0.6) 5%,#242424 23%);
-   
+    margin-bottom: 5%;
     overflow-x: hidden;
   }
 
@@ -599,7 +602,7 @@ background-image: linear-gradient(180deg,rgb(36, 18, 53) 40%, rgb(182, 176, 192)
     display: flex;
     flex-direction: column-reverse;
     height: 1000px;
-    background-image:linear-gradient(60deg,rgb(42, 5, 191) 5%,rgb(247, 247, 232));
+    background-image:linear-gradient(180deg,#2f283d 25%,#684e6d 95%);
 
     /* border: var(--border); */
   }
@@ -610,6 +613,7 @@ background-image: linear-gradient(180deg,rgb(36, 18, 53) 40%, rgb(182, 176, 192)
     /* 
     overflow-y: hidden; */
     /* border: var(--border); */
+    text-align: center;
   }
 
   .two::after {
@@ -841,7 +845,7 @@ background-image: linear-gradient(180deg,rgb(36, 18, 53) 40%, rgb(182, 176, 192)
     border-radius: 10px;
     font-family: var(--font-montserrat);
     cursor: pointer;
-    margin-bottom: 2%;
+    /* margin-bottom: 2%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -865,15 +869,13 @@ background-image: linear-gradient(180deg,rgb(36, 18, 53) 40%, rgb(182, 176, 192)
   .contact {
     overflow-x: hidden;
     width: 100%;
-    height: 900px;
+    height: 800px;
     /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  /* background-image: linear-gradient(red,yellow); */
-    margin-top: 25%;
-    background-color: #242424;
+  background-image: linear-gradient(#242424,#242424);
     margin-bottom: 0px;
   }
 
@@ -888,9 +890,11 @@ background-image: linear-gradient(180deg,rgb(36, 18, 53) 40%, rgb(182, 176, 192)
   .mesh > img {
     /* border: 1px solid red; */
     width: 0%;
+    height: fit-content;
     filter: invert(80%) sepia(100%) saturate(2476%) hue-rotate(86deg)
       brightness(118%) contrast(119%);
     animation: rotate 100s linear infinite;
+   
   }
   @keyframes rotate {
     from {
@@ -902,11 +906,11 @@ background-image: linear-gradient(180deg,rgb(36, 18, 53) 40%, rgb(182, 176, 192)
   }
 
   .contact-form {
-    background-image:linear-gradient(60deg,rgb(12, 7, 31) 5%,rgb(250, 250, 250));
+    background-image:linear-gradient(60deg,rgb(12, 7, 31) 5%,rgb(68, 16, 74));
     overflow-x: hidden;
     width: 60%;
     margin-top: -300px;
-    background-color: #292929;
+    
     opacity: 0.95;
     z-index: 1;
     /* border: 1px solid rgb(0, 8, 255); */
