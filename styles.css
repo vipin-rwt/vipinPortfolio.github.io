@@ -52,7 +52,7 @@ body {
   content: "";
   background: url(./media/Vipin.gif) no-repeat;
   background-size: 700px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   opacity: 0.2;
   top: 0;
   left: 0px;
@@ -543,14 +543,16 @@ TODO====================this is section 3 or frame 3 ends=======================
     width: 380px;
     height: 480px;
     margin-left: -90px;
+   
   }
 
   .text > span,
   p {
+    margin-top: 1%;
     font-family: var(--font-montserrat);
     text-shadow: 2px 2px 8px #373535;
     font-size: 2rem;
-    line-height: 3rem;
+    line-height: 2rem;
     font-weight: 600;
   }
   .text > .devtext {
