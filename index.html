@@ -11,7 +11,6 @@
       <img src="./media/logo.png" alt="" srcset="" width="80px" height="50px" />
     </header>
 
-
     <!------------------- section 1 starts----------------------- -->
     <section class="one">
       <div class="text">
@@ -20,13 +19,10 @@
         <h1 class="devtext">Full stack web developer</h1>
       </div>
       <div class="image">
-        <video width="680" height="980" autoplay loop muted  >
-        <source src="./media/vid (2).mp4" type="video/mp4">
-       
-
-      </video>
+        <video width="680" height="980" autoplay loop muted>
+          <source src="./media/vid (2).mp4" type="video/mp4" />
+        </video>
       </div>
-      
     </section>
     <!------------------- section 1 ends----------------------- -->
 
@@ -46,9 +42,14 @@
       </div>
       <!-- <img src="/media/min.svg" alt="" width="300px" height="400px" /> -->
       <div class="girl">
-        <img src="./media/log-in-girl.svg" alt="" srcset="" width="100%" height="100%">
+        <img
+          src="./media/log-in-girl.svg"
+          alt=""
+          srcset=""
+          width="100%"
+          height="100%"
+        />
       </div>
-         
     </section>
     <!----- section 2 ends--- -->
 
@@ -75,7 +76,7 @@
                     height="30px"
                   />
                   <img
-                    src="/media/mail.svg"
+                    src="./media/mail.svg"
                     alt=""
                     width="30px"
                     height="30px"
@@ -88,7 +89,8 @@
                   <p class="card-back-heading">Welcome.</p>
 
                   <p class="card-back-text">
-                    Welcome to the project sections. Take a deep dive look into the projects. Respective links are availaible there.
+                    Welcome to the project sections. Take a deep dive look into
+                    the projects. Respective links are availaible there.
                   </p>
 
                   <a class="Frontcard-Git-link" name="true" href=""
@@ -225,7 +227,7 @@
     <!-- <img src="s2.png" alt="" srcset="" width="50%" height="600px" style="margin-left: 20%;"> -->
 
     <div class="download" onclick="clickbtn(event)">
-      <a href="/resume.html">Resume</a>
+      <a href="./resume.html">Resume</a>
     </div>
 
     <div class="contact">
@@ -243,34 +245,32 @@
         />
       </div>
 
-    <div class="contact-form">
+      <div class="contact-form">
         <h2>Contact Us</h2>
         <form action="#" method="post" class="form-form">
-            <div class="form-group">
-                <label for="name">Name: &nbsp;&nbsp;&nbsp;&nbsp;  </label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Submit</button>
+          <div class="form-group">
+            <label for="name">Name: &nbsp;&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email"
+              >Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+            >
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
         </form>
-
-
-
       </div>
-    
-</div>
+    </div>
 
     <script type="module" src="js/main.js"></script>
     <script>
       async function fetchData() {
-        const response = await fetch("data.json");
+        const response = await fetch("./data.json");
         const data = await response.json();
         return data;
       }
@@ -282,42 +282,44 @@
       }
 
       async function Changecontent(n) {
-  const data = await fetchData();
-  const project = data[n];
+        const data = await fetchData();
+        const project = data[n];
 
-  // Select the elements
-  const threeSection = document.querySelector(".Frontcard-Git-link,.card-Git-link");
-  const cardBackHeading = document.getElementsByClassName("card-back-heading")[0];
-  const cardBackText = document.getElementsByClassName("card-back-text")[0];
-  const linkElement = document.getElementsByClassName("card-Git-link")[0];
+        // Select the elements
+        const threeSection = document.querySelector(
+          ".Frontcard-Git-link,.card-Git-link"
+        );
+        const cardBackHeading =
+          document.getElementsByClassName("card-back-heading")[0];
+        const cardBackText =
+          document.getElementsByClassName("card-back-text")[0];
+        const linkElement = document.getElementsByClassName("card-Git-link")[0];
 
-  // Introduce a 0.5-second delay
-  setTimeout(() => {
-    // Toggle visibility based on the condition
-    if (n < 3) {
-      threeSection.style.visibility = "visible";
-    } else {
-      threeSection.style.visibility = "hidden";
-    }
+        // Introduce a 0.5-second delay
+        setTimeout(() => {
+          // Toggle visibility based on the condition
+          if (n < 3) {
+            threeSection.style.visibility = "visible";
+          } else {
+            threeSection.style.visibility = "hidden";
+          }
 
-    // Update the content
-    cardBackHeading.textContent = project.title;
-    cardBackText.textContent = project.desc;
-    linkElement.href = project.link;
-  }, 100); // 500 milliseconds = 0.5 seconds
-}
-
+          // Update the content
+          cardBackHeading.textContent = project.title;
+          cardBackText.textContent = project.desc;
+          linkElement.href = project.link;
+        }, 100); // 500 milliseconds = 0.5 seconds
+      }
 
       function clickbtn(event) {
         event.preventDefault(); // Prevent the default action of the link
         const btn = document
           .getElementsByClassName("download")[0]
           .getElementsByTagName("a")[0];
-        btn.href = "/resume.html";
+        btn.href = "./resume.html";
         // Optionally, you can add this to follow the link after changing the href
         window.location.href = btn.href;
       }
     </script>
-
   </body>
 </html>
