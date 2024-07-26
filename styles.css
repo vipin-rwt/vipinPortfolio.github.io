@@ -22,9 +22,9 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   /* border: var(--border); */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-self: center;
+  justify-self: center; */
 }
 
 /*! ====================this is section one or frame 1============================ */
@@ -52,6 +52,7 @@ body {
   content: "";
   background: url(./media/Vipin.gif) no-repeat;
   background-size: 700px;
+  border: 1px solid red;
   opacity: 0.2;
   top: 0;
   left: 0px;
@@ -196,7 +197,7 @@ TODO:-for color only so no TODO======================this is section 3 or frame 
   justify-content: center;
   align-items: center;
   position: relative;
- 
+
   /* border: var(--border); */
 }
 
@@ -514,13 +515,15 @@ TODO====================this is section 3 or frame 3 ends=======================
   /*!====================start of section one or frame 1============================================================= */
 
   .one {
-    /* border: var(--border); */
+    /* border: 1px solid red; */
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;
     padding: 0px;
     margin-top: 2%;
+
+    overflow-x: hidden;
   }
 
   .text {
@@ -533,6 +536,7 @@ TODO====================this is section 3 or frame 3 ends=======================
   .one::after {
     content: "";
     display: none;
+    overflow: hidden;
   }
 
   .image > video {
@@ -541,11 +545,34 @@ TODO====================this is section 3 or frame 3 ends=======================
     margin-left: -90px;
   }
 
+  .text > span,
+  p {
+    font-family: var(--font-montserrat);
+    text-shadow: 2px 2px 8px #373535;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+  }
+  .text > .devtext {
+    /* border: var(--border); */
+    font-family: var(--Brick-font);
+    line-height: 3.5rem;
+    font-size: 2.5rem;
+    font-weight: 200;
+    display: inline;
+    margin-top: 0;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
   /*!====================End of section one or frame 1============================================================= */
 
   /*!====================start of section one or frame 2============================================================= */
 
   .two {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
     height: 1000px;
@@ -556,8 +583,8 @@ TODO====================this is section 3 or frame 3 ends=======================
   .text-about {
     width: 100%;
     height: 1800px;
-
-    overflow-y: hidden;
+    /* 
+    overflow-y: hidden; */
     /* border: var(--border); */
   }
 
@@ -610,7 +637,6 @@ TODO====================this is section 3 or frame 3 ends=======================
   }
 
   .thecard {
-    
     position: absolute;
     /* border: var(--border); */
     width: 100%;
@@ -650,7 +676,7 @@ TODO====================this is section 3 or frame 3 ends=======================
     /* border: 1px solid red; */
     height: 40px;
 
-    padding: 4% 2% 2% 2%;
+    padding: 2%;
     border-radius: 25px;
     display: flex;
     flex-direction: row;
@@ -714,7 +740,7 @@ TODO====================this is section 3 or frame 3 ends=======================
     list-style: none;
     align-content: flex-start;
     justify-content: flex-start;
-    margin-top: 5%;
+    margin-top: 1%;
     text-align: left;
   }
 
@@ -764,6 +790,7 @@ TODO====================this is section 3 or frame 3 ends=======================
   /*!====================End of section 3 or frame 3============================================================= */
 
   .download {
+    
     background-image: linear-gradient(
       to right,
       rgb(53, 123, 220) 21%,
@@ -790,7 +817,6 @@ TODO====================this is section 3 or frame 3 ends=======================
     justify-content: center;
     /* border: var(--border); */
     /* margin-top: -100px; */
-
   }
 
   .download > a {
@@ -807,6 +833,7 @@ TODO====================this is section 3 or frame 3 ends=======================
 
   /*!====================start of section 4 or frame 4============================================================= */
   .contact {
+    overflow-x: hidden;
     width: 100%;
     height: 900px;
     /* border: 1px solid white; */
@@ -828,6 +855,7 @@ TODO====================this is section 3 or frame 3 ends=======================
   }
 
   .mesh > img {
+    /* border: 1px solid red; */
     width: calc(100%-50px);
     filter: invert(80%) sepia(100%) saturate(2476%) hue-rotate(86deg)
       brightness(118%) contrast(119%);
@@ -843,6 +871,7 @@ TODO====================this is section 3 or frame 3 ends=======================
   }
 
   .contact-form {
+    overflow-x: hidden;
     width: 60%;
     margin-top: -300px;
     background-color: #292929;
@@ -853,11 +882,11 @@ TODO====================this is section 3 or frame 3 ends=======================
 
   .form-form {
     width: 100%;
-    /* border: 1px solid white; */
+ 
   }
 
   .contact-form {
-    /* background-image:linear-gradient(60deg,#f09976,#f1b096); */
+   
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -893,6 +922,35 @@ TODO====================this is section 3 or frame 3 ends=======================
     color: #333;
     margin-top: 3%;
   }
+  .contact-form button {
+    background-image: linear-gradient(
+      90deg,
+      rgb(234, 71, 71),
+      rgb(243, 152, 152)
+    );
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+    height: 50px;
+    margin: 2em 120px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+
+
 
   /*!====================End of section 4 or frame 4============================================================= */
+
+  /* ================================================================= */
 }
