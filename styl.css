@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #121212;
+    background-color: #2f2e2e;
     color: #ffffff;
     position: relative;
 }
@@ -20,7 +20,7 @@ body {
     width: 20%;
     height: 55px;
     background-image: linear-gradient(90deg,rgb(234, 71, 71),rgb(243, 152, 152));
-   font-size: 1.2em;
+   font-size: 1.2rem;
    font-weight: 600;
    border-radius: 5px;
    text-align: center;
@@ -73,29 +73,6 @@ section,table,div,li,ul{
 }
 
 
-.ring1 {
-    border: 50px solid rgba(255, 131, 42, 0.6); /* Make border semi-transparent */
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: absolute;
-    backdrop-filter: blur(10px); /* Adjusted blur value */
-    margin-left: 34%;
-    margin-top: -60px;
-}
-
-.ring2 {
-    border: 200px solid rgba(255, 131, 42, 0.6); /* Make border semi-transparent */
-    background-color: rgba(255, 131, 42, 0.6); /* Make background semi-transparent */
-    border-radius: 50%;
-    width: 100px;
-    height: 300px;
-    position: absolute;
-    margin-top: -250px;
-    margin-left: 49%;
-    backdrop-filter: blur(100px); /* Adjusted blur value */
-    z-index: -5;
-}
 
 
 
@@ -188,3 +165,32 @@ section .skills p {
 
 
 
+@media screen and (max-width:500px){
+
+
+    .download{
+        margin: auto;
+        color: white;
+        width: 50%;
+        height: 55px;
+        background-image: linear-gradient(90deg,rgb(234, 71, 71),rgb(243, 152, 152));
+       font-size: 1.2rem;
+       font-weight: 600;
+       border-radius: 5px;
+       text-align: center;
+       margin-top: 2%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transition: linear 0.5s ease;
+      }
+      .download>a{
+        color: white;
+        text-decoration:none;
+      }
+      
+      .download:hover{
+        background-image: linear-gradient(90deg,rgb(48, 89, 211),rgb(203, 153, 241));
+      }
+
+}

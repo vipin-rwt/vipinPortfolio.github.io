@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vipin.com</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      @keyframes appear {
+        from {
+          opacity: 0;
+          scale: 0.5;
+        }
+        to {
+          opacity: 1;
+          scale: 1;
+        }
+
+        section {
+          animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -12,14 +31,14 @@
     </header>
 
     <!------------------- section 1 starts----------------------- -->
-    <section class="one">
+    <section class="one block">
       <div class="text">
         <span>hello!</span>
         <p class="hola">I am Vipin Rawat</p>
         <h1 class="devtext">Full stack web developer</h1>
       </div>
       <div class="image">
-        <video width="500" height="980" autoplay loop muted >
+        <video width="500" height="980" autoplay loop muted>
           <source src="./media/vid (2).mp4" type="video/mp4" />
         </video>
       </div>
@@ -27,7 +46,7 @@
     <!------------------- section 1 ends----------------------- -->
 
     <!----- section 2 starts--- -->
-    <section class="two">
+    <section class="two block">
       <div class="text-about">
         <p class="heading">About.</p>
         <p class="text-ab">
@@ -40,7 +59,7 @@
           solutions.
         </p>
       </div>
-     
+
       <div class="girl">
         <img
           src="./media/log-in-girl.svg"
@@ -54,7 +73,7 @@
     <!----- section 2 ends--- -->
 
     <!----- section 3 starts--- -->
-    <div class="outerContainer">
+    <div class="outerContainer block">
       <div class="container" name="">
         <div class="thecard">
           <section class="three" name="true">
@@ -74,14 +93,18 @@
                     alt=""
                     width="30px"
                     height="30px"
+                    onclick="social(1)"
+                    class="linkgit"
                   />
                   <img
                     src="./media/mail.svg"
                     alt=""
                     width="30px"
                     height="30px"
+                    id="emailImage"
+                    onclick="social(2)"
                   />
-                  <img src="./media/in.svg" alt="" width="30px" height="30px" />
+                  <img src="./media/in.svg" alt="" width="30px" height="30px" onclick="social(3)"  class="linkin" />
                 </div>
               </header>
               <section class="card-content">
@@ -125,11 +148,6 @@
                         >Movie recommendation</a
                       >
                     </li>
-                    <li>
-                      <a href="#" onclick="flip(2); return false;" class="next"
-                        >Next project</a
-                      >
-                    </li>
                   </ul>
                 </div>
               </section>
@@ -138,7 +156,7 @@
 
           <!-- back face -->
 
-          <section class="back-three">
+          <section class="back-three block">
             <section class="card">
               <header class="card-header" onclick="flip(3)">
                 <div class="card-logo">
@@ -147,6 +165,7 @@
                     alt=""
                     width="100%"
                     height="100%"
+                  
                   />
                 </div>
                 <div class="card-sociallink">
@@ -155,23 +174,27 @@
                     alt=""
                     width="30px"
                     height="30px"
+                    onclick="social(1)"
+                    class="linkgit"
                   />
                   <img
                     src="./media/mail.svg"
                     alt=""
                     width="30px"
                     height="30px"
+                    onclick="social(2)"
+                    id="emailImage"
                   />
-                  <img src="./media/in.svg" alt="" width="30px" height="30px" />
+                  <img src="./media/in.svg" alt="" width="30px" height="30px" onclick="social(3)" class="linkin" />
                 </div>
               </header>
-              <section class="card-content">
+              <section class="card-content block">
                 <div class="Welcome-text">
                   <p class="card-back-heading"></p>
 
                   <p class="card-back-text"></p>
 
-                  <a class="card-Git-link" href="">Github link</a>
+                  <a class="card-Git-link" href=""></a>
                 </div>
 
                 <div class="project-section">
@@ -205,16 +228,6 @@
                         >Movie recommendation</a
                       >
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        onclick="flip(2); return false;"
-                        class="next"
-                        return
-                        false
-                        >Next project</a
-                      >
-                    </li>
                   </ul>
                 </div>
               </section>
@@ -224,13 +237,11 @@
       </div>
     </div>
 
-   
-
     <div class="download" onclick="clickbtn(event)">
       <a href="./resume.html">Resume</a>
     </div>
 
-    <div class="contact">
+    <section class="contact">
       <div class="mesh">
         <img
           src="mesh.svg"
@@ -246,8 +257,8 @@
       </div>
 
       <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="#" method="post" class="form-form">
+        <h2>Contact me</h2>
+        <form id="form-form" class="form-form">
           <div class="form-group">
             <label for="name">Name: &nbsp;&nbsp;&nbsp;&nbsp; </label>
             <input type="text" id="name" name="name" required />
@@ -256,16 +267,16 @@
             <label for="email"
               >Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
             >
-            <input type="email" id="email" name="email" required />
+            <input type="email" name="email" required />
           </div>
           <div class="form-group">
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" onsubmit="ssubmit(event)">Submit</button>
         </form>
       </div>
-    </div>
+    </section>
 
     <script type="module" src="js/main.js"></script>
     <script>
@@ -293,7 +304,8 @@
           document.getElementsByClassName("card-back-heading")[0];
         const cardBackText =
           document.getElementsByClassName("card-back-text")[0];
-        const linkElement = document.getElementsByClassName("card-Git-link")[0];
+        const linkElement =
+          document.getElementsByClassName("Frontcard-Git-link")[0];
 
         // Introduce a 0.5-second delay
         setTimeout(() => {
@@ -308,6 +320,7 @@
           cardBackHeading.textContent = project.title;
           cardBackText.textContent = project.desc;
           linkElement.href = project.link;
+          console.log(project.link);
         }, 100); // 500 milliseconds = 0.5 seconds
       }
 
@@ -319,6 +332,28 @@
         btn.href = "./resume.html";
         // Optionally, you can add this to follow the link after changing the href
         window.location.href = btn.href;
+      }
+
+      function ssubmit(event) {
+        event.preventDefault();
+        alert("submitted");
+        let fin = document.getElementById("form");
+        fin.reset();
+      }
+
+      function social(n) {
+        if (n === 1) {
+          window.location.href = "https://github.com/vipin-rwt";
+          
+        }
+
+        if (n === 2) {
+          window.location.href = "mailto:example@example.com";
+        }
+
+        if (n === 3) {
+          window.location.href = "https://www.linkedin.com/in/vipin-rwt/";
+        }
       }
     </script>
   </body>
